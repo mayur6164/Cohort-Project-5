@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    background-color: #f0f5fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root {
+    --bodyBg: #f0f5fa;
+    --formBg: #ffffff;
+    --labelText: #555555;
+    --inputText: #757575;
+    --btnColor: #0078fa;
+}
+
+/* utility classes  */
+.bdrRds {
+    border-radius: .5rem;
+}
+
+/* utility classes  */
+#formCont {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: clamp(20rem, 30vw, 30rem);
+    padding: 2rem;
+    box-shadow: 0rem 0rem .5rem rgba(128, 128, 128, 0.412);
+}
+
+#formCont form {
+    background-color: var(--formBg);
+    display: flex;
+    flex-direction: column;
+}
+
+#formCont h1 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#formCont form input,
+textarea {
+    border: 1px solid lightgray;
+    color: #757575;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    transition: all .2s ease-in-out;
+
+    &:focus {
+        box-shadow: 0rem 0rem .2rem #0078fa;
+        outline: 1px solid #0078fa;
+    }
+}
+
+#formCont form input[type="submit"] {
+    background: #0078fa;
+    color: white;
+    font-size: 1rem;
+    transition: all .2s ease-in-out;
+
+
+    &:active {
+        outline: none;
+        box-shadow: .0rem .0rem 1rem lightgray;
+    }
+
+    &:hover {
+        background-color: #0360c5;
+    }
+}
+
+#formCont form textarea {
+    height: 8rem;
+}
+
+#formCont form label {
+    color: #5c5c5c;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+@media (min-width:600px) {
+    #formCont {
+        width: clamp(28rem, 10vw, 60rem);
+    }
+}
+
+@media (max-width:400px) {
+    #formCont {
+        width: clamp(19rem, 10vw, 10rem);
+        padding: 1rem;
+    }
+}
