@@ -76,6 +76,7 @@ textarea {
     &:active {
         outline: none;
         box-shadow: .0rem .0rem 1rem lightgray;
+        transform: scale(.95);
     }
 
     &:hover {
